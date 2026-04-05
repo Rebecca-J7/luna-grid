@@ -1,8 +1,6 @@
 # Luna Grid
 
-**Luna Grid** is a **live map for tracking feminine hygiene supplies** (pads & tampons) in women's restrooms. It allows users to quickly see which restrooms have available products and their current quantities, helping them find nearby supplies in case of need.
-
-This project is built with **Next.js 13**, **React Leaflet**, and **TypeScript**, and currently uses **mock data** for development. In the future, it will integrate an **ESP32 with a camera** for real-time supply tracking.
+**Luna Grid** is am **interactive system** that consists of a **cabinet containing feminine products that is linked to a live map for tracking feminine hygiene supplies** (pads & tampons) in women's restrooms. It allows users to quickly see which restrooms have available products and their current quantities, helping them find nearby supplies in case of need.
 
 ---
 
@@ -35,49 +33,39 @@ This project is built with **Next.js 13**, **React Leaflet**, and **TypeScript**
 
 ---
 
-## Project Structure
-restroom-supply-map/
-├── app/
-│ └── page.tsx # Home page
-├── components/
-│ ├── Map.tsx # Client-only dynamic map wrapper
-│ ├── MapClient.tsx # Leaflet map component
-│ └── CabinetMarker.tsx # Marker popup component
-├── data/
-│ └── cabinets.ts # Mock cabinet data
-├── styles/
-│ └── map.css # External CSS
-├── package.json
-└── tsconfig.json
+## 🧱 Tech Stack
+### Luna Grid Website
+| Technology | Purpose |
+|-----------|--------|
+| **JavaScript (ES2020+)** | Component logic and data handling |
+| **Leaflet** | Interactive map rendering |
+| **Leaflet MarkerCluster** | Marker clustering for improved performance and usability |
+| **OpenStreetMap** | Open-source map tile provider |
+| **HTML5** | Semantic markup and accessible structure |
+| **CSS3** | Layout and styling |
+| **TBD** | Backend data source for reports |
+
+### Luna Grid Cabinet
+| Component | Purpose |
+|---------|--------|
+| **Photoresistor** | Detects lighting to signal the opening and closing of cabinet door |
+| **LED's** | Provides optimal lighting for the inside of the cabinet |
+| **Servo** | Triggered to cover the ESP32 camera for privacy when it detects the cabinet door is open and uncovers when the cabinet door is closed |
+| **Cabinet** | Physical structure integrating all components |
+---
 
 ---
 
-## Getting Started (Local Development)
+## Data Stored Per Report
 
-1. **Clone the repository**:
+Each submission creates a new row in Google Sheets containing:
+- Timestamp  
+- Latitude + Longitude
+- Building (for demo purposes we are considering a campus environment)  
+- Number of pads
+- Number of tampons
+- Staus (Full, Low, Empty)
 
-```bash
-git clone https://github.com/<your-username>/luna-grid.git
-cd luna-grid/restroom-supply-map
-
-```
-2. **Install Dependencies**:
-
-```bash
-npm install
-```
-
-3. **Run Development Server**:
-
-```bash
-npm run dev
-```
-4. **Open http://localhost:3000 to view the live map.**:
-
-```bash
-npm run build
-npm start
-```
-
+---
 
 
