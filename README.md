@@ -33,7 +33,7 @@
 
 ---
 
-## 🧱 Tech Stack
+## Tech Stack
 ### Luna Grid Website
 | Technology | Purpose |
 |-----------|--------|
@@ -43,8 +43,8 @@
 | **OpenStreetMap** | Open-source map tile provider |
 | **HTML5** | Semantic markup and accessible structure |
 | **CSS3** | Layout and styling |
-| **Edge Impulse** | Object Detection using ESP32-CAM and Edge Impulse YOLO Model |
-| **Supabase** | Backend data source for reports |
+| **Edge Impulse** | Object Detection using ESP32-CAM and Edge Impulse YOLO Model | (future implementation)
+| **Supabase** | Backend data source for reports | (future implementation)
 
 ### Luna Grid Cabinet
 | Component | Purpose |
