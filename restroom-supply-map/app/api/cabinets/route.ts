@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server'
-import supabase from '../../../lib/supabaseAdmin'
+import { supabaseAdmin } from '../../../lib/supabaseAdmin'
 
 export async function GET() {
-  const { data, error } = await supabase
+  const { data, error } = await supabaseAdmin
     .from('cabinets')
     .select('*')
 
