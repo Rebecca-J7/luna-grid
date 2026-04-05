@@ -11,7 +11,7 @@
    - The ESP32 identifies each product and counts the number of pads and tampons.
 
 2. **Real-Time Updates on the Map**  
-   - The ESP32 sends the counts to the server (future backend integration).  
+   - The ESP32 sends the counts to the server.  
    - Users can view a live map showing product availability in nearby restrooms.  
    - This allows users to choose the best restroom based on current supply levels.
 
@@ -43,7 +43,8 @@
 | **OpenStreetMap** | Open-source map tile provider |
 | **HTML5** | Semantic markup and accessible structure |
 | **CSS3** | Layout and styling |
-| **TBD** | Backend data source for reports |
+| **Edge Impulse** | Object Detection using ESP32-CAM and Edge Impulse YOLO Model |
+| **Supabase** | Backend data source for reports |
 
 ### Luna Grid Cabinet
 | Component | Purpose |
@@ -58,13 +59,13 @@
 
 ## Data Stored Per Report
 
-Each submission creates a new row in Google Sheets containing:
-- Timestamp  
-- Latitude + Longitude
+Each cabinet reports live data on the Luna Grid map containing:
+- Location (Recorded from Latitude + Longitude_
 - Building (for demo purposes we are considering a campus environment)  
 - Number of pads
 - Number of tampons
 - Staus (Full, Low, Empty)
+- Timestamp (last updated)
 
 ---
 

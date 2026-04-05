@@ -1,13 +1,7 @@
-// import type { NextConfig } from "next";
+import type { NextConfig } from "next";
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  // output: 'export',        // Enables static export
-  // trailingSlash: true,     // Optional, makes URLs like /about/ instead of /about.html
-  // If your site is under a repo subpath, add:
-  // basePath: '/your-repo-name',
+const nextConfig: NextConfig = {
+  /* config options here */
 };
-
-module.exports = nextConfig;
 
 export default nextConfig;
