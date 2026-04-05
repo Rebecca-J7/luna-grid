@@ -1,6 +1,6 @@
 import MapComponent from "../components/Map"
 
-// export const dynamic = "force-dynamic"
+export const dynamic = "force-dynamic"
 
 export default function Home() {
   return (
@@ -40,7 +40,7 @@ export default function Home() {
         </div>
       </div>
 
-      <p className="footer-note">Data refreshes every 30 seconds · Luna Grid</p>
+      <p className="footer-note">Data refreshes every 3 minutes · Luna Grid</p>
     </main>
   )
 }
