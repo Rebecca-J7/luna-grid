@@ -1,40 +1,183 @@
-.map-container {
-  height: 100vh;
-  width: 100%;
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3.5rem 2rem 4rem;
+  gap: 1.75rem;
 }
+
+.site-header {
+  text-align: center;
+  animation: fadeUp 0.8s ease both;
+}
+
+.logo-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.main-title {
+  font-size: 3.5rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #C47AB8 0%, #9B6EAC 50%, #7B5EA7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #8B7A96;
+  font-weight: 400;
+  max-width: 500px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.stats-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: fadeUp 0.8s 0.15s ease both;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.stat-pill {
+  background: white;
+  border: 0.5px solid rgba(180,140,200,0.25);
+  border-radius: 999px;
+  padding: 0.4rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #7B5EA7;
+  font-weight: 500;
+}
+
+.stat-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+.dot-green { background: #7BC47A; }
+.dot-amber { background: #E8A96A; }
+.dot-red  { background: #D97A8A; }
+
+.map-card {
+  width: 100%;
+  max-width: 820px;
+  background: white;
+  border-radius: 20px;
+  border: 0.5px solid rgba(180,140,200,0.2);
+  overflow: hidden;
+  box-shadow: 0 4px 32px rgba(160,120,190,0.08);
+  animation: fadeUp 0.8s 0.3s ease both;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.map-card-header {
+  padding: 0.9rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.5px solid rgba(180,140,200,0.15);
+}
+
+.map-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #9B78B0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.live-badge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.75rem;
+  color: #7BC47A;
+  font-weight: 500;
+}
+
+.live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #7BC47A;
+  animation: pulse 2s infinite;
+}
+
+.map-container {
+  height: 460px;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+
+.map-legend {
+  padding: 0.8rem 1.25rem;
+  display: flex;
+  gap: 1.5rem;
+  border-top: 0.5px solid rgba(180,140,200,0.15);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: #8B7A96;
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.footer-note {
+  font-size: 0.75rem;
+  color: #B09ABE;
+  animation: fadeUp 0.8s 0.45s ease both;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+/* Dot styles for the map legend */
+.dot-stocked { background: #7BC47A; }
+.dot-low     { background: #E8A96A; }
+.dot-empty   { background: #D97A8A; }
 
 /* Popup styling */
-.popup-content {
-  font-family: Arial, sans-serif;
-  min-width: 200px;
+.popup-content { font-family: var(--font-funnel-sans); min-width: 200px; }
+.popup-title { font-size: 15px; font-weight: 600; margin-bottom: 4px; color: #2D1F3D; }
+.popup-text { margin: 2px 0; font-size: 13px; color: #5C4A70; }
+.popup-small { font-size: 12px; margin-top: 4px; color: #9B78B0; }
+
+.status.green { color: #5BAF5A; font-weight: 600; }
+.status.orange { color: #C87D3A; font-weight: 600; }
+.status.red { color: #B95060; font-weight: 600; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.popup-title {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 4px;
-}
-
-.popup-text {
-  margin: 2px 0;
-}
-
-.popup-small {
-  font-size: 12px;
-  margin-top: 4px;
-}
-
-.status.green {
-  color: green;
-  font-weight: bold;
-}
-
-.status.orange {
-  color: orange;
-  font-weight: bold;
-}
-
-.status.red {
-  color: red;
-  font-weight: bold;
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
 }

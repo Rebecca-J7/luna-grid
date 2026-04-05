@@ -2,6 +2,7 @@
 
 import { MapContainer, TileLayer } from "react-leaflet"
 import "leaflet/dist/leaflet.css"
+import "../styles/map.css"
 import CabinetMarker from "./CabinetMarker"
 import { cabinets } from "../data/cabinets"
 import L from "leaflet"
@@ -21,8 +22,8 @@ export default function MapClient() {
   return (
     <MapContainer center={[32.7157, -117.1611]} zoom={15} className="map-container">
       <TileLayer
-        attribution="© OpenStreetMap"
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>'
+        url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
       />
       {cabinets.map((cabinet) => (
         <CabinetMarker key={cabinet.id} cabinet={cabinet} />
