@@ -17,8 +17,8 @@ type CabinetStatus = {
 // Determine status based on supply
 function getStatus(pads: number, tampons: number): CabinetStatus {
   const total = pads + tampons
-  if (total > 15) return { label: "Full", color: "green" }
-  if (total > 5) return { label: "Low", color: "orange" }
+  if (total >= 7) return { label: "Full", color: "green" }
+  if (total <= 6 && total > 0) return { label: "Low", color: "orange" }
   return { label: "Empty", color: "red" }
 }
 

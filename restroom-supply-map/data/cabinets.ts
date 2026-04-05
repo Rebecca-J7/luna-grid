@@ -12,29 +12,47 @@ export type Cabinet = {
 export const cabinets: Cabinet[] = [
   {
     id: 1,
-    building: "Student Center",
-    lat: 32.7157,
-    lng: -117.1611,
-    pads: 18,
-    tampons: 12,
-    lastUpdated: "1 minute ago"
+    building: "Computer Science & Engineering Building",
+    lat: 32.881875,
+    lng: -117.233485,
+    pads: 10,
+    tampons: 2,
+    lastUpdated: "1 minute ago",
   },
   {
     id: 2,
-    building: "Library",
-    lat: 32.7165,
-    lng: -117.1603,
+    building: "Jason Hall",
+    lat: 32.881722742918114,
+    lng: -117.2352323525576,
     pads: 6,
     tampons: 4,
-    lastUpdated: "3 minutes ago"
+    lastUpdated: "3 minutes ago",
   },
   {
     id: 3,
-    building: "Science Hall",
-    lat: 32.7173,
-    lng: -117.1622,
+    building: "Warren College",
+    lat: 32.881540543454555,
+    lng: -117.23397504691314,
     pads: 2,
     tampons: 1,
-    lastUpdated: "5 minutes ago"
-  }
+    lastUpdated: "5 minutes ago",
+  },
+  {
+    id: 4,
+    building: "Atkinson Hall",
+    lat: 32.88242007009082,
+    lng:-117.23481408628746,
+    pads: 0,
+    tampons: 0,
+    lastUpdated: "2 minutes ago",
+  },
+  {
+    id: 5,
+    building: "Engineering Building Unit 2",
+    lat: 32.8810996145701,
+    lng: -117.2330027458802,
+    pads: 4,
+    tampons: 0,
+    lastUpdated: "1 minute ago",
+  },
 ]
